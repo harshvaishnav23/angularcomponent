@@ -1,1 +1,27 @@
 <h2>We are in Products Component</h2>
+
+<!-- <button class="btn btn-primary">click</button> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group mb-4">
+                <li class="list-group-item" *ngFor="let skill of skills"> I love {{skill}}</li>         
+            </ul>
+
+            <ul class="list-group mb-4">
+                <li class="list-group-item" *ngFor="let playr of players"> They made us proud named as {{playr}}</li>
+            </ul>
+            <ul class="list-group mb-4">
+                <li class="list-group-item" *ngFor="let sprt of sports"> We have to play {{sprt}}</li>
+            </ul>
+            <ul class="list-group mb-4">
+                <li class="list-group-item" *ngFor="let comp of sportComp"> We love products of {{comp}}</li>
+            </ul>
+            <ul class="list-group mb-4">
+                <li class="list-group-item" *ngFor="let car of cars"> I love to drive {{car}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
