@@ -7,3 +7,11 @@ export interface Iperson {
     contact: number;
     email: string;
 }
+
+
+export interface Iplayers {
+    name : string;
+    sport : string;
+    jersey_Num : number;
+    country : string;
+}

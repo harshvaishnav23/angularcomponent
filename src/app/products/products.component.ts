@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 
 
@@ -8,15 +8,48 @@ import { Component } from "@angular/core";
     styleUrls : ['./products.component.scss']
 })
 
-export class ProductsComponent {
+export class ProductsComponent implements OnInit{
+    isFormValid : boolean = false;
+    productStatus : string = `No Product is added !!!`
+    count = 0;
+    constructor(){       
+    }
+    ngOnInit(): void {
+        console.log('Components INIT')
 
-    // skills : string[] = ['html', 'css', 'js', 'node js', 'Angular']
-    // players : string[] = ['kohli', 'dhoni', 'prannoy', 'sharat kamal', 'sunil chhetrti']
-    // sports : string[] = ['cricket', 'football', 'Table-Tennis', 'Badminton', 'Squash']
-    // sportComp : string[] = ['reebok', 'puma', 'adidas', 'Yonex', 'Nike']
-    // cars : string[] = ['Audi R8', 'BMW-Q3', 'Mustang', 'Mercedes-BENZ', 'Lamborgini']
-    constructor(){
-        
+        setInterval(() => {
+            this.isFormValid = true
+        }, 3000)     
+    }
+
+    onProductAdd(){
+            console.log('Btn Clicked')
+            this.count++;
+            this.productStatus = `${this.count} Products are added to Cart !!!`
+    }
+
+    onRemoveProduct(){
+        if(this.count === 0){
+            return
+        }
+            
+        if(this.count === 1){
+            this.count--;
+            this.productStatus = `No Products are in the cart!!!`
+        }
+
+        if(this.count > 1){
+            this.count--;
+            this.productStatus = `${this.count} Products are added to the cart !!!`
+        }
+    }
+
+    onProductSearch(eve:Event){
+        // console.log(eve)
+        let val = (eve.target as HTMLInputElement).value;
+        console.log(val)
+
+
     }
 }
 

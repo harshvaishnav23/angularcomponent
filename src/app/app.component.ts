@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Iperson } from './models/persons';
+import { Iperson, Iplayers } from './models/persons';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,10 @@ export class AppComponent {
   sportComp : string[] = ['reebok', 'puma', 'adidas', 'Yonex', 'Nike']
   cars : string[] = ['Audi R8', 'BMW-Q3', 'Mustang', 'Mercedes-BENZ', 'Lamborgini']
 
-  persons : Array<Iperson>= [
+  pName = 'Samsung23';
+  Iphone = 'Iphone 15 Pro'
+
+  persons : Array<Iperson> = [
     {
       fname : 'Jhon',
       lname : 'Doe',
@@ -34,6 +37,33 @@ export class AppComponent {
       contact : 8746363296,
       email : 'siya@gmail.com'
     }
+  ]
+
+  players2 : Array<Iplayers> = [
+    {
+      name : 'Virat Kohli',
+      sport : 'Cricket',
+      jersey_Num : 18,
+      country : 'India'
+    },
+    {
+      name : 'Christiano Ronaldo',
+      sport : 'Football',
+      jersey_Num : 7,
+      country : 'Portugal'
+    },
+    {
+      name : 'Roger Federer',
+      sport : 'Lawn-Tennis',
+      jersey_Num : 8,
+      country : 'Switzerland'
+    },
+    {
+      name : 'H S Prannoy',
+      sport : 'Badminton',
+      jersey_Num : 1,
+      country : 'Switzerland'
+    },
   ]
   constructor(){
 
