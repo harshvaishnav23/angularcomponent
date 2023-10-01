@@ -1,0 +1,42 @@
+<!-- <img [src]="mobileArray[0].image" alt=""> -->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4" *ngFor="let prod of mobileArray">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mble-img">
+                            <img class="img-fluid" *ngIf="prod.image.length > 0; else noImg" [src]="prod.image"
+                                [alt]="prod.name" [title]="prod.name">
+
+                            <ng-template #noImg>
+                                <p class="noImg text-muted d-flex justify-content-center align-items-center">No preview
+                                    is available</p>
+                            </ng-template>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="mb-4" [ngStyle]="{fontSize : '2rem'}">
+                             {{prod.name}}
+                        </h4>
+                        <h5 class="mb-4">Brand : {{prod.brand}}</h5>
+
+                        <ul class="mble-list">
+                            
+                            <h5>Specification</h5>
+                            <li class="spec-list">{{prod.color}}</li>
+                            <li class="spec-list">{{prod.Sim_Type}}</li>
+                            <li class="spec-list">{{prod.in_Box}}</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-md-4 text-center price">
+                        <p>&#8377; {{prod.price}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

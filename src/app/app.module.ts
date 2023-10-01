@@ -6,13 +6,15 @@ import { ProductsComponent } from './products/products.component';
 import { StudentsComponent } from './students/students.component';
 import { FormsModule } from '@angular/forms';
 import { TabComponent } from './tab/tab.component';
+import { PostsComponent } from './posts/posts.component';
+import { MobileComponent } from './mobile/mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent, 
     StudentsComponent, 
-    TabComponent
+    TabComponent, PostsComponent, MobileComponent
   ],
   imports: [
     BrowserModule,
