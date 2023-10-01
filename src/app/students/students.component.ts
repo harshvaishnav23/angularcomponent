@@ -9,6 +9,9 @@ import { Component } from "@angular/core";
 })
 
 export class StudentsComponent {
+    fname : string = 'Harsh';
+    lname : string = 'Vaishnav';
+    bgColor : string = 'orange'
     constructor(){
 
     } 

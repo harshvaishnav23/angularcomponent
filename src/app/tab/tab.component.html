@@ -1,0 +1,61 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        (click)="selectedFrameWork = 'angular'"
+        [ngClass]="{
+            'active' : selectedFrameWork === 'angular'
+        }"
+        >Angular</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        (click)="selectedFrameWork = 'react'"
+        [ngClass]="{
+            'active' : selectedFrameWork === 'react'
+        }"
+        >React</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        (click)="onTabClick('node')"
+        [ngClass]="{
+            'active' : selectedFrameWork === 'node'
+        }"
+        >Node Js</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        (click)="onTabClick('express')"
+        [ngClass]="{
+            'active'  : selectedFrameWork === 'express'
+        }"
+        >Express</a>
+    </li>
+</ul>
+
+<div class="tab-body">
+    <div class="card" *ngIf="selectedFrameWork === 'angular'">
+        <div class="card-body">
+            <strong>Angular</strong>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, natus commodi laborum deserunt quos soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla voluptates, exercitationem quo eius voluptatem cumque?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFrameWork === 'react'">
+        <div class="card-body">
+            <strong>React</strong>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, natus commodi laborum deserunt quos soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla voluptates, exercitationem quo eius voluptatem cumque?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFrameWork === 'node'">
+        <div class="card-body" >
+            <strong>Node Js</strong>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, natus commodi laborum deserunt quos soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla voluptates, exercitationem quo eius voluptatem cumque?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFrameWork === 'express'">
+        <div class="card-body">
+            <strong>Express</strong>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, natus commodi laborum deserunt quos soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla voluptates, exercitationem quo eius voluptatem cumque?
+        </div>
+    </div>
+</div>

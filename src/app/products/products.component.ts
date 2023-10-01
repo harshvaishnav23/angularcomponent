@@ -11,6 +11,7 @@ import { Component, OnInit } from "@angular/core";
 export class ProductsComponent implements OnInit{
     isFormValid : boolean = false;
     productStatus : string = `No Product is added !!!`
+    productSearchValue : string = '' ; // now length is 0
     count = 0;
     constructor(){       
     }
@@ -49,7 +50,7 @@ export class ProductsComponent implements OnInit{
         let val = (eve.target as HTMLInputElement).value;
         console.log(val)
 
-
+        this.productSearchValue = val;
     }
 }
 

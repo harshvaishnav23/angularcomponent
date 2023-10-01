@@ -25,6 +25,15 @@
             <input type="text" class="form-control"
             (keyup)="onProductSearch($event)"
             >
+            <input type="text" class="form-control"
+            [(ngModel)]="productSearchValue"
+            >
+            <p [innerHTML]="productSearchValue"
+            *ngIf="productSearchValue.length > 0"
+            class="alert alert-warning"></p> 
+            <!-- ye hume tabhi show krna hai jb kuch data insert ya type hoga. -->
+
+            
         </div>
     </div>
 </div>
